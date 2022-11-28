@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet"> 
+    <title>Regex101</title>
+    <style>
+        h1 {
+            font-family: 'Rubik Microbe', cursive;
+            text-align: center;
+            font-size: 100px;
+        }
+        #regex {
+            font-size: 35px;
+            border: none;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        textarea {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            border: none;
+            font-size: 35px;
+            height: 10%;
+        }
+        button {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            border:none;
+            border: 2px solid black;
+            font-size: 35px;
+            margin-top: 2%;
+            background-color: white;
+        }
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+        p {
+            text-align: center;
+            font-size: 45px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Regex101</h1>
+    <form action="/">
+        <input id="regex" type="text" name="regex" placeholder="regex"><br>
+        <textarea type="text" name="text" placeholder="text"></textarea>
+        <button type="submit">Match</button>
+    </form>
+    <p>{{.Result}}</p>
+</body>
+</html>
