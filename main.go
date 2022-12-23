@@ -2,19 +2,17 @@ package main
 
 import (
 	"net/http"
-	"github.com/gorilla/mux"
 	"fmt"
-	"github.com/0xshushu/regex101/handlers"
+	"github.com/0xshushu/regex101/server"
 )
 
 func main() {
-	//make a new router
-	r := mux.NewRouter().StrictSlash(true)
+	//make a new server
+	s := server.NewServer()
 
-	//set routes
-	r.HandleFunc("/", handlers.Index).Methods("GET")
-	r.NotFoundHandler = http.HandlerFunc(handlers.NotFound)
+	//mount handlers
+	s.MountHandlers()
 
 	//start serving
-	fmt.Println(http.ListenAndServe(":3000", r))
+	fmt.Println(http.ListenAndServe(":3000", s.Router))
 }
